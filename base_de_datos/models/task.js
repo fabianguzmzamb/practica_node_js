@@ -1,18 +1,15 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Task = sequelize.define('Task', {
-    description: DataTypes.TEXT ,
-    createdAt: {
-      type: DataTypes.DATE,
-      field: 'created_at'
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      field: 'updated_at'
-    }
-  }, {
-    timestamps:true
-  });
+    description: DataTypes.TEXT 
+  }, {});
+ Task.asociate = function (models) {
+   //esto quiere decir que una tarea le pertenece a un usuario
+   Task.belongsTo(models.User,{
+     as:'user',
+     foreignKey: 'userId'
+   });
+ }
 
   return Task;
 };

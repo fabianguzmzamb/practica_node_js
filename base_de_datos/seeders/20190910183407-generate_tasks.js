@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 module.exports = {
   //up es para las instrucciones q se van insertar
