@@ -33,3 +33,7 @@ npm install method-override
 npm install bcrypt
 
 npm install express-session
+
+npm install socket.io
+
+npm install socket.io-client
