@@ -37,3 +37,5 @@ npm install express-session
 npm install socket.io
 
 npm install socket.io-client
+
+npm install pg
